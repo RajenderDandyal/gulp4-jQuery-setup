@@ -15,7 +15,8 @@ var replace = require("gulp-replace");
 // File paths
 const files = {
   scssPath: "app/scss/**/*.scss",
-  jsPath: "app/js/**/*.js"
+  jsPath: "app/js/**/*.js",
+  htmlPath: "app/*.html"
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -55,7 +56,10 @@ function cacheBustTask() {
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask() {
-  watch([files.scssPath, files.jsPath], parallel(scssTask, jsTask));
+  watch(
+    [files.scssPath, files.jsPath, files.htmlPath],
+    parallel(scssTask, jsTask, cacheBustTask)
+  );
 }
 
 function webServer() {
