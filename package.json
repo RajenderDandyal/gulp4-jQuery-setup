@@ -6,17 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/planetoftheweb/jquery-interface-645062-.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/planetoftheweb/jquery-interface-645062-/issues"
-  },
-  "homepage": "https://github.com/planetoftheweb/jquery-interface-645062-#readme",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
